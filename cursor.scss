@@ -1,0 +1,98 @@
+// This is just to center the spinner
+
+html,
+body {
+  height: 100vh;
+  background-color: #121212;
+  cursor: none;
+}
+
+body {
+  display: flex;
+  align-items: bottom;
+  justify-content: left;
+}
+
+// Here is where the magic happens
+
+$offset: 187;
+$duration: 2.5s;
+
+.spinner {
+  animation: rotator $duration linear infinite;
+  
+}
+
+@keyframes rotator {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(270deg);
+  }
+}
+
+.path {
+  stroke-dasharray: $offset;
+  stroke-dashoffset: 0;
+  transform-origin: center;
+  
+  animation:
+    dash $duration ease-in-out infinite,
+    colors ($duration*4) ease-in-out infinite;
+}
+
+@keyframes colors {
+  0% {
+    stroke: rgba(18, 27, 41,0.3);
+  }
+
+  25% {
+    stroke: rgba(117, 102, 102,0.3);
+  }
+
+  50% {
+    stroke: rgba(0, 0, 0,0.3);
+  }
+
+  75% {
+    stroke: rgba(106, 151, 128, 0.192);
+  }
+
+  100% {
+    stroke: rgba(141, 176, 231,0.3);
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: $offset;
+  }
+
+  50% {
+    stroke-dashoffset: $offset/2;
+    transform: rotate(135deg);
+  }
+
+  100% {
+    stroke-dashoffset: $offset;
+    transform: rotate(450deg);
+  }
+}
+
+.cursor {
+  pointer-events: none;
+  
+  &__ball {
+    position: fixed;
+    top: 0;
+    left: 0;
+    mix-blend-mode: difference;
+    z-index: 1000;
+    
+    circle {
+      fill: #f7f8fa;
+    }
+  }      
+} 
