@@ -1,0 +1,286 @@
+.stamp {
+  position: absolute;
+  left: 10%;
+  top: 35%;
+  z-index: -1;
+}
+
+.stamp p {
+  color: #fff;
+  font-size: 3vmax;
+  font-family: 'Libre Baskerville', serif;
+  margin: 0;
+}
+
+.stamp .circle {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  display: block;
+  left: 50%;
+  top: 50%;
+  background-color: transparent;
+  -webkit-animation: rotating 9.5s linear infinite;
+          animation: rotating 9.5s linear infinite;
+}
+
+.stamp .circle span {
+  font-family: 'Rubik', sans-serif;
+  font-weight: bold;
+  font-size: 1.8vmax;
+  color: #fff;
+  height: 10vmax;
+  position: absolute;
+  display: inline-block;
+  left: 0;
+  bottom: 0;
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
+}
+
+.char1 {
+  -webkit-transform: rotate(13deg);
+          transform: rotate(13deg);
+}
+
+.char2 {
+  -webkit-transform: rotate(26deg);
+          transform: rotate(26deg);
+}
+
+.char3 {
+  -webkit-transform: rotate(39deg);
+          transform: rotate(39deg);
+}
+
+.char4 {
+  -webkit-transform: rotate(52deg);
+          transform: rotate(52deg);
+}
+
+.char5 {
+  -webkit-transform: rotate(65deg);
+          transform: rotate(65deg);
+}
+
+.char6 {
+  -webkit-transform: rotate(78deg);
+          transform: rotate(78deg);
+}
+
+.char7 {
+  -webkit-transform: rotate(91deg);
+          transform: rotate(91deg);
+}
+
+.char8 {
+  -webkit-transform: rotate(104deg);
+          transform: rotate(104deg);
+}
+
+.char9 {
+  -webkit-transform: rotate(117deg);
+          transform: rotate(117deg);
+}
+
+.char10 {
+  -webkit-transform: rotate(130deg);
+          transform: rotate(130deg);
+}
+
+.char11 {
+  -webkit-transform: rotate(143deg);
+          transform: rotate(143deg);
+}
+
+.char12 {
+  -webkit-transform: rotate(156deg);
+          transform: rotate(156deg);
+}
+
+.char13 {
+  -webkit-transform: rotate(169deg);
+          transform: rotate(169deg);
+}
+
+.char14 {
+  -webkit-transform: rotate(182deg);
+          transform: rotate(182deg);
+}
+
+.char15 {
+  -webkit-transform: rotate(195deg);
+          transform: rotate(195deg);
+}
+
+.char16 {
+  -webkit-transform: rotate(208deg);
+          transform: rotate(208deg);
+}
+
+.char17 {
+  -webkit-transform: rotate(221deg);
+          transform: rotate(221deg);
+}
+
+.char18 {
+  -webkit-transform: rotate(234deg);
+          transform: rotate(234deg);
+}
+
+.char19 {
+  -webkit-transform: rotate(247deg);
+          transform: rotate(247deg);
+}
+
+.char20 {
+  -webkit-transform: rotate(260deg);
+          transform: rotate(260deg);
+}
+
+.char21 {
+  -webkit-transform: rotate(273deg);
+          transform: rotate(273deg);
+}
+
+.char22 {
+  -webkit-transform: rotate(286deg);
+          transform: rotate(286deg);
+}
+
+.char23 {
+  -webkit-transform: rotate(299deg);
+          transform: rotate(299deg);
+}
+
+.char24 {
+  -webkit-transform: rotate(312deg);
+          transform: rotate(312deg);
+}
+
+.char25 {
+  -webkit-transform: rotate(325deg);
+          transform: rotate(325deg);
+}
+
+.char26 {
+  -webkit-transform: rotate(338deg);
+          transform: rotate(338deg);
+}
+
+.char27 {
+  -webkit-transform: rotate(351deg);
+          transform: rotate(351deg);
+}
+
+.char28 {
+  -webkit-transform: rotate(364deg);
+          transform: rotate(364deg);
+}
+
+@-webkit-keyframes rotating {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotating {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+body {
+  height: 100vh;
+  background: #121212;
+  cursor: none;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: monospace;
+}
+
+body h1,
+body a {
+  color: #fff;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 60px;
+  padding-bottom: 60%;
+}
+
+body p {
+  color: #fff;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 30px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#646464), to(#696767)) 0 100%/0 1px no-repeat;
+  background: linear-gradient(#646464, #696767) 0 100%/0 1px no-repeat;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+body p:hover {
+  background-size: 15% 1.5px;
+  -webkit-transition: 0.6s ease;
+  transition: 0.6s ease;
+}
+
+body .test {
+  margin-left: 5%;
+}
+
+body a {
+  border-bottom: 2px solid #fff;
+  padding: 10px 0;
+  margin-top: 25px;
+}
+
+body .cursor {
+  pointer-events: none;
+}
+
+body .cursor__ball {
+  position: fixed;
+  top: 0;
+  left: 0;
+  mix-blend-mode: difference;
+  z-index: 1000;
+}
+
+body .cursor__ball circle {
+  fill: #f7f8fa;
+}
+
+body .left,
+body .right {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .right {
+  background: #fff;
+}
+/*# sourceMappingURL=style.css.map */
